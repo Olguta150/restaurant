@@ -20,6 +20,8 @@ export function homePage() {
     const sixthLi = document.createElement('li');
     const seventhLi = document.createElement('li');
 
+    content.classList.add('hp-content');
+
     title.textContent = `At Lola's`;
     title.classList.add('title');
     
@@ -34,11 +36,11 @@ export function homePage() {
     hours.textContent = 'Hours';
     hours.classList.add('hours');
 
-    firstLi.textContent = 'Monday: 10am - 10pm';
-    secondLi.textContent = 'Tuesday: 10am - 10pm';
-    thirdLi.textContent = 'Wednesday: 10am - 10pm';
-    fourthLi.textContent = 'Thursday: 10am - 10pm';
-    fifthLi.textContent = 'Friday: 10am - 10pm';
+    firstLi.textContent = 'Monday: 9am - 10pm';
+    secondLi.textContent = 'Tuesday: 9am - 10pm';
+    thirdLi.textContent = 'Wednesday: 9am - 10pm';
+    fourthLi.textContent = 'Thursday: 9am - 10pm';
+    fifthLi.textContent = 'Friday: 10am - 11pm';
     sixthLi.textContent = 'Saturday: 11am - 11pm';
     seventhLi.textContent = 'Sunday: 11am - 11pm';
 
