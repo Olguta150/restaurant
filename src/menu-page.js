@@ -1,5 +1,5 @@
 export function menuPage() {
-    console.log('This is contact-page');
+    console.log('This is menu-page');
     const content = document.getElementById('content');
     const allWrap = document.createElement('div');
     const wrap = document.createElement('div');
@@ -96,7 +96,7 @@ export function menuPage() {
     underlineSix.classList.add('underline');
     const priceSix = document.createElement('div');
     priceSix.classList.add('price-item');
-    priceSix.textContent = '$40';
+    priceSix.textContent = '$40.00';
     wrap.appendChild(boxSix);
     boxSix.appendChild(titleSix);
     boxSix.appendChild(underlineSix);
@@ -110,7 +110,7 @@ export function menuPage() {
     underlineSeven.classList.add('underline');
     const priceSeven = document.createElement('div');
     priceSeven.classList.add('price-item');
-    priceSeven.textContent = '$40';
+    priceSeven.textContent = '$40.00';
     wrap.appendChild(boxSeven);
     boxSeven.appendChild(titleSeven);
     boxSeven.appendChild(underlineSeven);
