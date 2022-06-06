@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'parisienne';
-    src: url('./fonts/parisienne-regular-webfont.woff') format('woff'), url('./fonts/parisienne-regular-webfont.woff2') format('woff2');
+    src: url('./fonts/parisienne-regular-webfont.woff') format('woff');
 
 }
 
@@ -20,16 +20,17 @@
     box-sizing: border-box;
 }
 
-body {
+/* body {
     background:rgba(184, 53, 21, 0.5);
     overflow-x: hidden;
-}
+} */
 
 #content {
     width: 100vw;
     height: 100vh;
     background: url(./cover-image.jpg);
     background-size: cover;
+    overflow-x: hidden;
 }
 
 #content::before {
@@ -67,15 +68,13 @@ body {
 }
 
 .header ul li {
-    padding-top: 30px;
-}
-
-.header ul li a {
     position: relative;
     color: #fff;
+    padding-top: 30px;
+    cursor: pointer;
 }
 
-.header ul li a::after {
+.header ul li::after {
     content: '';
     position: absolute;
     width: 0%;
@@ -88,7 +87,7 @@ body {
     transition: width 0.4s;
 }
 
-.header ul li a:hover::after {
+.header ul li:hover::after {
     width: 100%;
 }
 
@@ -96,7 +95,9 @@ body {
 
 /* --------------STYLE FOR HOMEPAGE--------------- */
 
-.hp-content {
+.first-part {
+    height: 100vh;
+    width: 100vw;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -120,15 +121,19 @@ body {
     font-weight: 600;
 }
 
+.home-page {
+    background:rgba(252, 170, 150, 0.95);
+}
+
 .description {
     position: relative;
     width: 70%;
     height: 400px;
     background:rgb(250, 239, 239);
-    margin: -150px auto;
+    margin: 0px auto;
     padding: 125px 60px;
     text-align: center;
-    top: 110px;
+    top: -50px;
     font-family: 'TiroKannada';
     font-size: 22px;
 }
@@ -137,9 +142,9 @@ body {
     position: relative;
     width: 30%;
     height: 700px;
-    background:rgba(255, 254, 254, 0.30);
-    margin: 350px auto 100px;
-    box-shadow: 2px 2px 7px rgba(120, 119, 119, 0.5);
+    background:rgba(255, 254, 254, 0.8);
+    margin: 100px auto 100px;
+    box-shadow: 2px 2px 7px rgba(120, 119, 119, 0.7);
 }
 
 .hours {
@@ -173,10 +178,6 @@ li {
 
 a {
     text-decoration: none;
-    color: #000;
-}
-
-a:hover {
     color: rgb(117, 30, 197);
 }
 
@@ -188,7 +189,7 @@ a:hover {
 /* --------------START STYLE FOR MENU----------------- */
 
 .all-wrap {
-    position: relative;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -198,7 +199,6 @@ a:hover {
 
 .menu-title {
     position: relative;
-    top: 180px;
     font-size: 70px;
     font-family: 'Kalam';
 }
@@ -208,7 +208,6 @@ a:hover {
     display: flex;
     flex-direction: column;
     width: 40%;
-    top: 180px;
     margin: 0 auto;
     padding: 25px;
     background:rgba(0, 0, 0, 0.8);
@@ -240,11 +239,12 @@ a:hover {
 
 /* --------------START STYLE FOR CONTACT----------------- */
 
-.contact-content {
+.contact-all-wrap {
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     gap: 50px;
 }
 
