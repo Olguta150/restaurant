@@ -1,7 +1,13 @@
 export function homePage() {
     console.log('This is home page');
-    const body = document.querySelector('body');
     const content = document.getElementById('content');
+
+    content.replaceChildren();
+
+    const firstPart = document.createElement('div');
+    const secondPart = document.createElement('div');
+
+
     const title = document.createElement('div');
     const subtitle = document.createElement('h5');
     const homePage = document.createElement('div');
@@ -20,6 +26,8 @@ export function homePage() {
     const sixthLi = document.createElement('li');
     const seventhLi = document.createElement('li');
 
+    firstPart.classList.add('first-part');
+    secondPart.classList.add('second-part');
     content.classList.add('hp-content');
 
     title.textContent = `At Lola's`;
@@ -49,9 +57,11 @@ export function homePage() {
     Nick Karvounis`;
     a.href = 'https://unsplash.com/photos/Ciqxn7FE4vE';
 
-    content.appendChild(title);
-    content.appendChild(subtitle);
-    body.appendChild(homePage);
+    content.appendChild(firstPart);
+    content.appendChild(secondPart);
+    firstPart.appendChild(title);
+    firstPart.appendChild(subtitle);
+    secondPart.appendChild(homePage);
     homePage.appendChild(description);
     homePage.appendChild(programme);
     programme.appendChild(hours);
