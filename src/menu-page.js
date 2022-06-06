@@ -1,6 +1,9 @@
 export function menuPage() {
     console.log('This is menu-page');
     const content = document.getElementById('content');
+
+    content.replaceChildren();
+
     const allWrap = document.createElement('div');
     const wrap = document.createElement('div');
 
