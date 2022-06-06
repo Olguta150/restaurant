@@ -2,17 +2,22 @@ export function contactPage() {
     console.log('This is contact page');
 
     const content = document.getElementById('content');
+
+    content.replaceChildren();
+
+    const contactAllWrap = document.createElement('div');
     const contactTitle = document.createElement('div');
     const contactWrap = document.createElement('div');
 
     contactTitle.textContent = 'Contact';
     contactTitle.classList.add('contact-title');
     contactWrap.classList.add('contact-wrap');
-    content.classList.add('contact-content');
+    contactAllWrap.classList.add('contact-all-wrap');
 
-    content.appendChild(contactTitle);
-    content.appendChild(contactWrap);
-
+    content.appendChild(contactAllWrap);
+    contactAllWrap.appendChild(contactTitle);
+    contactAllWrap.appendChild(contactWrap);
+    
     const number = document.createElement('p');
     const mail = document.createElement('p');
     const address = document.createElement('p');
